@@ -20,10 +20,31 @@ const routes = [
         }
       },
       {
+        path: 'baogaozhongxin',
+        component: routerComponent.baogaozhongxin,
+        meta: {
+          title: '报告中心'
+        }
+      },
+      {
         path: 'jianyanbaogaoxiangqing',
         component: routerComponent.jianyanbaogaoxiangqing,
         meta: {
           title: '检验报告详情'
+        }
+      },
+      {
+        path: 'jianchabaogao',
+        component: routerComponent.jianchabaogao,
+        meta: {
+          title: '检查报告'
+        }
+      },
+      {
+        path: 'jianchabaogaoxiangqing',
+        component: routerComponent.jianchabaogaoxiangqing,
+        meta: {
+          title: '检查报告详情'
         }
       }
     ]

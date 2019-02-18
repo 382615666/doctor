@@ -25,7 +25,7 @@ export default {
 </script>
 <style lang="less" scoped>
   .person-info-component{
-    padding: 10px 15px 10px 80px;
+    padding: 13px 15px 13px 80px;
     height: 50px;
     background: #32c691;
     .avator{

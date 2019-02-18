@@ -1,7 +1,7 @@
 <template>
   <div class="layout-simple-component">
     <p class="simple-title">{{title}}：</p>
-    <div class="simple-content" style="">
+    <div class="simple-content">
       <slot></slot>
     </div>
   </div>

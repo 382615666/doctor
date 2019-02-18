@@ -3,7 +3,7 @@
     border
   }">
     <div class="app-header-wrap">
-      <i class="iconfont icon-ren1" @click="$router.back()"></i>
+      <icon class="icon-jiantou" @click.native="$router.back()"></icon>
       {{$route.meta.title}}
     </div>
   </div>
@@ -44,12 +44,16 @@ export default {
         border-bottom: 1px solid #e6e6e6;
       }
     }
+    .icon-jiantou{
+      left: 0;
+    }
+  }
+</style>
+<style lang="less">
+  .app-header-component{
     .iconfont{
       width: 40px;
       position: absolute;
-    }
-    .icon-ren1{
-      left: 0;
     }
   }
 </style>

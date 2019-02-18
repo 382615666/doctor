@@ -47,5 +47,10 @@ export default {
       
   }    
 </style>
+<style lang="less">
+  .${dirName}-page{
+      
+  } 
+</style>
 `;
 writeToFile(path.resolve(distPath, './index.vue'), vueStr);
