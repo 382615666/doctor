@@ -2,11 +2,11 @@
   <div class="person-info-component">
     <img :src="avator" alt="" class="avator">
     <div class="info-item-box">
-      <span class="info-item">唐悠悠</span>
-      <span class="info-item">男</span>
-      <span class="info-item">28岁</span>
+      <span class="info-item">{{data.xm}}</span>
+      <span class="info-item">{{data.xb}}</span>
+      <span class="info-item">{{data.nl}}岁</span>
     </div>
-    <p class="info-item-box">身份证：130221***115</p>
+    <p class="info-item-box">身份证：{{data.sfzh}}</p>
   </div>
 </template>
 <script>
@@ -17,6 +17,14 @@ export default {
     return {
       avator
     };
+  },
+  props: {
+    data: {
+      type: Object,
+      default () {
+        return {};
+      }
+    }
   },
   methods: {
 
