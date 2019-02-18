@@ -3,7 +3,7 @@ const routes = [
   {
     path: '/',
     component: routerComponent.layout,
-    redirect: 'binganshouye',
+    redirect: 'baogaozhongxin',
     children: [
       {
         path: 'binganshouye',
