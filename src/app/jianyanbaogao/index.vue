@@ -4,31 +4,31 @@
     <div class="report-box">
       <report-list time="2018/01/02" title="浏阳市中心医院">
         <report-item
-                icon="icon-big-Pay"
+                icon="icon-weixin"
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿常规（11项）</report-item>
         <report-item
-                icon="icon-big-Pay"
+                icon="icon-weixin"
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿沉渣定量</report-item>
       </report-list>
       <report-list time="2018/01/02" title="浏阳市中心医院">
         <report-item
-                icon="icon-big-Pay"
+                icon="icon-weixin"
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿常规（11项）</report-item>
         <report-item
-                icon="icon-big-Pay"
+                icon="icon-weixin"
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿沉渣定量</report-item>
       </report-list>
       <report-list time="2018/01/02" title="浏阳市中心医院">
         <report-item
-                icon="icon-big-Pay"
+                icon="icon-weixin"
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿常规（11项）</report-item>
         <report-item
-                icon="icon-big-Pay"
+                icon="icon-weixin"
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿沉渣定量</report-item>
       </report-list>
