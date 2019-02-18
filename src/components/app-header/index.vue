@@ -3,7 +3,7 @@
     border
   }">
     <div class="app-header-wrap">
-      <icon class="icon-jiantou" @click.native="$router.back()"></icon>
+      <icon class="icon-jiantou" @click.native="back"></icon>
       {{$route.meta.title}}
     </div>
   </div>
@@ -23,7 +23,14 @@ export default {
     }
   },
   methods: {
-
+    back () {
+      if (window.history.length) {
+        this.$router.back();
+      } else {
+        // 返回app，app会拦截
+        window.location.href = '/backToApp.action';
+      }
+    }
   }
 };
 </script>
