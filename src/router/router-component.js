@@ -1,4 +1,6 @@
 export default {
   binganshouye: () => import('@/app/binganshouye'),
-  layout: () => import('@/app/layout'),
+  jianyanbaogao: () => import('@/app/jianyanbaogao'),
+  jianyanbaogaoxiangqing: () => import('@/app/jianyanbaogaoxiangqing'),
+  layout: () => import('@/app/layout')
 };

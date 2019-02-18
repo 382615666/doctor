@@ -1,7 +1,6 @@
 <template>
-  <div class="layout-page">
-    <app-header></app-header>
-    <router-view></router-view>
+  <div class="jianyanbaogao-page">
+    <person-info></person-info>
   </div>
 </template>
 <script>
@@ -17,6 +16,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-  .layout-page{
+  .jianyanbaogao-page{
   }
 </style>

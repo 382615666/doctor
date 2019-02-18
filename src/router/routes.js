@@ -7,7 +7,24 @@ const routes = [
     children: [
       {
         path: 'binganshouye',
-        component: routerComponent.binganshouye
+        component: routerComponent.binganshouye,
+        meta: {
+          title: '病案首页'
+        }
+      },
+      {
+        path: 'jianyanbaogao',
+        component: routerComponent.jianyanbaogao,
+        meta: {
+          title: '检验报告'
+        }
+      },
+      {
+        path: 'jianyanbaogaoxiangqing',
+        component: routerComponent.jianyanbaogaoxiangqing,
+        meta: {
+          title: '检验报告详情'
+        }
       }
     ]
   }
