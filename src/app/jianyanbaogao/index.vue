@@ -48,7 +48,18 @@ export default {
   destroyed () {
     document.body.style.background = '';
   },
+  created () {
+    this.getData();
+  },
   methods: {
+    getData () {
+      this.$api.jianyanbaogao.get({
+        orgCode: '445013138', // 医院id
+        inHospitalId: 1,// 住院号
+        pageSize: 10,
+        pageNo: 1
+      });
+    },
     toggleRoute(path) {
       this.$router.push(path);
     }
