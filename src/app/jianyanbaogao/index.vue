@@ -1,10 +1,8 @@
 <template>
   <div class="jianyanbaogao-page">
-    <div class="person-info-box">
-      <person-info :data="patientInfo"></person-info>
-    </div>
+    <person-info :data="patientInfo"></person-info>
     <div class="report-box"
-       v-infinite-scroll="loadMore"
+       v-infinite-scroll="getData"
        infinite-scroll-disabled="loading"
        infinite-scroll-distance="100"
     >
@@ -31,9 +29,9 @@ export default {
   data () {
     return {
       page: {
-        pageNo: 1
+        pageNo: 0
       },
-      loading: true,
+      loading: false,
       listData: [],
       patientInfo: {}
     };
@@ -45,14 +43,9 @@ export default {
     document.body.style.background = '';
   },
   methods: {
-    loadMore () {
-      console.log(this.loading);
-      setTimeout(() => {
-        this.page.pageNo++;
-        this.getData();
-      }, 1000);
-    },
     getData () {
+      this.loading = true;
+      this.page.pageNo++;
       this.$api.jianyanbaogao.get({
         orgCode: '445013138', // 医院id
         inHospitalId: 1, // 住院号
@@ -61,7 +54,7 @@ export default {
       }).then(data => {
         this.patientInfo = data.data.patientInfo;
         this.listData = [...this.listData, ...data.data.lisList];
-        this.page.totalPage = data.totalPage;
+        this.loading = this.page.pageNo >= data.totalPage;
       });
     },
     toggleRoute(path) {
@@ -74,12 +67,12 @@ export default {
   .jianyanbaogao-page{
     .report-box{
       padding: 0 10px;
-      /*position: fixed;*/
-      /*left: 0;*/
-      /*right: 0;*/
-      /*top: 120px;*/
-      /*bottom: 0;*/
-      /*overflow: auto;*/
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 120px;
+      bottom: 0;
+      overflow: auto;
     }
   }
 </style>

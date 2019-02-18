@@ -2,38 +2,36 @@
   <div class="baogaozhongxin-page">
     <person-info></person-info>
     <div class="report-box">
-      <mt-loadmore :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
-        <report-list time="2018/01/02">
-          <report-item @click.native="toggleRoute('jianyanbaogao')">
-            <tag icon="icon-ziyuan" slot="icon">检验</tag>
-            尿常规（11项）
-          </report-item>
-          <report-item @click.native="toggleRoute('jianchabaogao')">
-            <tag icon="icon-icon-test1" secondary slot="icon">检查</tag>
-            尿沉渣定量
-          </report-item>
-        </report-list>
-        <report-list time="2018/01/02">
-          <report-item @click.native="toggleRoute('jianyanbaogao')">
-            <tag icon="icon-ziyuan" slot="icon">检验</tag>
-            尿常规（11项）
-          </report-item>
-          <report-item @click.native="toggleRoute('jianchabaogao')">
-            <tag icon="icon-icon-test1" secondary slot="icon">检查</tag>
-            尿沉渣定量
-          </report-item>
-        </report-list>
-        <report-list time="2018/01/02">
-          <report-item @click.native="toggleRoute('jianyanbaogao')">
-            <tag icon="icon-ziyuan" slot="icon">检验</tag>
-            尿常规（11项）
-          </report-item>
-          <report-item @click.native="toggleRoute('jianchabaogao')">
-            <tag icon="icon-icon-test1" secondary slot="icon">检查</tag>
-            尿沉渣定量
-          </report-item>
-        </report-list>
-      </mt-loadmore>
+      <report-list time="2018/01/02">
+        <report-item @click.native="toggleRoute('jianyanbaogao')">
+          <tag icon="icon-ziyuan" slot="icon">检验</tag>
+          尿常规（11项）
+        </report-item>
+        <report-item @click.native="toggleRoute('jianchabaogao')">
+          <tag icon="icon-icon-test1" secondary slot="icon">检查</tag>
+          尿沉渣定量
+        </report-item>
+      </report-list>
+      <report-list time="2018/01/02">
+        <report-item @click.native="toggleRoute('jianyanbaogao')">
+          <tag icon="icon-ziyuan" slot="icon">检验</tag>
+          尿常规（11项）
+        </report-item>
+        <report-item @click.native="toggleRoute('jianchabaogao')">
+          <tag icon="icon-icon-test1" secondary slot="icon">检查</tag>
+          尿沉渣定量
+        </report-item>
+      </report-list>
+      <report-list time="2018/01/02">
+        <report-item @click.native="toggleRoute('jianyanbaogao')">
+          <tag icon="icon-ziyuan" slot="icon">检验</tag>
+          尿常规（11项）
+        </report-item>
+        <report-item @click.native="toggleRoute('jianchabaogao')">
+          <tag icon="icon-icon-test1" secondary slot="icon">检查</tag>
+          尿沉渣定量
+        </report-item>
+      </report-list>
     </div>
   </div>
 </template>
