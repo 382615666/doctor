@@ -12,26 +12,6 @@
                 remark="肾内科六科室"
                 @click.native="toggleRoute('jianchabaogaoxiangqing')">尿沉渣定量</report-item>
       </report-list>
-      <report-list time="2018/01/02" title="浏阳市中心医院">
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿常规（11项）</report-item>
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿沉渣定量</report-item>
-      </report-list>
-      <report-list time="2018/01/02" title="浏阳市中心医院">
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿常规（11项）</report-item>
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿沉渣定量</report-item>
-      </report-list>
     </div>
   </div>
 </template>
