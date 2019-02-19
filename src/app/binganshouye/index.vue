@@ -163,10 +163,7 @@ export default {
   },
   methods: {
     getData () {
-      this.$api.binganshouye.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1 // 住院号
-      }).then(data => {
+      this.$api.binganshouye.get(this.$route.query).then(data => {
         this.info = data;
       });
     },

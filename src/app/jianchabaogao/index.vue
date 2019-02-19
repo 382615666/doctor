@@ -16,7 +16,7 @@
                 v-for="(it, ind) in item.lisList"
                 :key="ind"
                 icon="icon-big-Pay"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">{{it.jcbw}}</report-item>
+                @click.native="toggleRoute(it.pacsId)">{{it.jcbw}}</report-item>
       </report-list>
     </div>
   </div>
@@ -26,7 +26,8 @@ export default {
   data () {
     return {
       page: {
-        pageNo: 0
+        pageNo: 0,
+        pageSize: 10
       },
       loading: false,
       listData: [],
@@ -46,19 +47,24 @@ export default {
     getData () {
       this.loading = true;
       this.page.pageNo++;
-      this.$api.jianchabaogao.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1, // 住院号
-        pageSize: 10,
+      this.$api.jianchabaogao.get(Object.assign({
+        pageSize: this.page.pageSize,
         pageNo: this.page.pageNo
-      }).then(data => {
+      }, this.$route.query)).then(data => {
         this.patientInfo = data.data.patientInfo;
         this.listData = [...this.listData, ...data.data.list];
         this.loading = this.page.pageNo >= data.totalPage;
       });
     },
-    toggleRoute(path) {
-      this.$router.push(path);
+    toggleRoute(pacsId) {
+      this.$router.push({
+        path: 'jianchabaogaoxiangqing',
+        query: {
+          pacsId,
+          ...this.page,
+          ...this.$route.query
+        }
+      });
     }
   }
 };

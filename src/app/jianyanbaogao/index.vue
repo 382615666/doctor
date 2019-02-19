@@ -17,7 +17,7 @@
                 :key="ind"
                 icon="icon-weixin"
                 :remark="it.ks"
-                @click.native="toggleRoute('jianyanbaogaoxiangqing')">{{it.bbzl}}</report-item>
+                @click.native="toggleRoute(it.lisId)">{{it.bbzl}}</report-item>
       </report-list>
     </div>
   </div>
@@ -44,19 +44,23 @@ export default {
     getData () {
       this.loading = true;
       this.page.pageNo++;
-      this.$api.jianyanbaogao.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1, // 住院号
+      this.$api.jianyanbaogao.get(Object.assign({
         pageSize: 10,
         pageNo: this.page.pageNo
-      }).then(data => {
+      }, this.$route.query)).then(data => {
         this.patientInfo = data.data.patientInfo;
         this.listData = [...this.listData, ...data.data.list];
         this.loading = this.page.pageNo >= data.totalPage;
       });
     },
-    toggleRoute(path) {
-      this.$router.push(path);
+    toggleRoute(lisId) {
+      this.$router.push({
+        path: 'jianyanbaogaoxiangqing',
+        query: {
+          lisId,
+          ...this.$route.query
+        }
+      });
     }
   }
 };

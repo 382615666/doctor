@@ -1,9 +1,9 @@
 <template>
   <div class="feiyongqingdan-page">
     <div class="info-box">
-      <div class="info-item">病人累计费用：2354.00元</div>
-      <div class="info-item">费用开始日期：2019-01-01</div>
-      <div class="info-item">费用结束日期：2018-01-01</div>
+      <div class="info-item">病人累计费用：{{info.ljfy}}元</div>
+      <div class="info-item">费用开始日期：{{info.fyksrq}}</div>
+      <div class="info-item">费用结束日期：{{info.fyjsrq}}</div>
     </div>
     <div class="feiyong-title-box">
       <span class="feiyong-title">详细清单</span>
@@ -49,12 +49,11 @@ export default {
     getData () {
       this.loading = true;
       this.page.pageNo++;
-      this.$api.feiyongqingdan.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1, // 住院号
+      this.$api.feiyongqingdan.get(Object.assign({
         pageSize: 10,
         pageNo: this.page.pageNo
-      }).then(data => {
+      }, this.$route.query)).then(data => {
+        this.info = data.data;
         this.listData = [...this.listData, ...data.data.expenseList];
         this.loading = this.page.pageNo >= data.totalPage;
       });

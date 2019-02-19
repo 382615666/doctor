@@ -32,13 +32,7 @@ export default {
   },
   methods: {
     getData () {
-      this.$api.jianchabaogaoxiangqing.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1, // 住院号
-        pageSize: 10,
-        pacsId: 1,
-        pageNo: 1
-      }).then(data => {
+      this.$api.jianchabaogaoxiangqing.get(this.$route.query).then(data => {
         this.info = data;
       });
     }

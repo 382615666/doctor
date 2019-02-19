@@ -53,13 +53,10 @@ export default {
     getData () {
       this.loading = true;
       this.page.pageNo++;
-      this.$api.jianyanbaogaoxiangqing.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1, // 住院号
+      this.$api.jianyanbaogaoxiangqing.get(Object.assign({
         pageSize: 10,
-        lisId: 1,
         pageNo: this.page.pageNo
-      }).then(data => {
+      }, this.$route.query)).then(data => {
         this.info = data.data.lis
         this.listData = [...this.listData, ...data.data.lis.list];
         this.loading = this.page.pageNo >= data.totalPage;

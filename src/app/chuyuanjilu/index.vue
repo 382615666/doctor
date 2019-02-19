@@ -32,10 +32,7 @@ export default {
   },
   methods: {
     getData () {
-      this.$api.chuyuanjilu.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1 // 住院号
-      }).then(data => {
+      this.$api.chuyuanjilu.get(this.$route.query).then(data => {
         this.info = data;
         this.patientInfo = data.patientInfo;
       });

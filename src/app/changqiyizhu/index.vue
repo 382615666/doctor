@@ -41,12 +41,10 @@ export default {
     getData () {
       this.loading = true;
       this.page.pageNo++;
-      this.$api.changqiyizhu.get({
-        orgCode: '445013138', // 医院id
-        inHospitalId: 1, // 住院号
+      this.$api.changqiyizhu.get(Object.assign({
         pageSize: 10,
         pageNo: this.page.pageNo
-      }).then(data => {
+      }, this.$route.query)).then(data => {
         this.patientInfo = data.data.patientInfo;
         this.listData = [...this.listData, ...data.data.list];
         this.loading = this.page.pageNo >= data.totalPage;
