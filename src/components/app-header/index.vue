@@ -3,7 +3,12 @@
     border
   }">
     <div class="app-header-wrap">
-      <icon class="icon-jiantou" @click.native="back"></icon>
+      <a href="/backToApp.action?module=TO_WJJ_FOLLOW_UP" style="color: #666;"
+         v-if="!$route.meta.route"
+      >
+        <icon class="icon-jiantou"></icon>
+      </a>
+      <icon v-if="$route.meta.route" class="icon-jiantou" @click.native="back"></icon>
       {{$route.meta.title}}
     </div>
   </div>
@@ -24,12 +29,7 @@ export default {
   },
   methods: {
     back () {
-      if (window.history.length) {
-        this.$router.back();
-      } else {
-        // 返回app，app会拦截
-        window.location.href = '/backToApp.action';
-      }
+      this.$router.back();
     }
   }
 };

@@ -3,7 +3,6 @@ const routes = [
   {
     path: '/',
     component: routerComponent.layout,
-    redirect: 'binganshouye',
     children: [
       {
         path: 'binganshouye',
@@ -30,7 +29,8 @@ const routes = [
         path: 'jianyanbaogaoxiangqing',
         component: routerComponent.jianyanbaogaoxiangqing,
         meta: {
-          title: '检验报告详情'
+          title: '检验报告详情',
+          route: true
         }
       },
       {
@@ -44,7 +44,8 @@ const routes = [
         path: 'jianchabaogaoxiangqing',
         component: routerComponent.jianchabaogaoxiangqing,
         meta: {
-          title: '检查报告详情'
+          title: '检查报告详情',
+          route: true
         }
       },
       {

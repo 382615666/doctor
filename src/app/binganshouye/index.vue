@@ -25,7 +25,7 @@
       <layout-cell title="出生日期" color="#32c691">2018-01-01</layout-cell>
       <layout-cell title="年龄" color="#32c691">30</layout-cell>
       <layout-cell title="国籍" color="#32c691">中国</layout-cell>
-      <layout-cell title="备注" color="#32c691">测试吸收if第三方so已欧式佛ISf第三方so已欧式佛ISf第三方so已欧式佛ISO死的非师范</layout-cell>
+      <layout-cell title="备注" color="#32c691">病人已经经过初步治疗，病情有所好转，预计这几周可以顺利出院</layout-cell>
     </div>
     <div class="record-list-box">
       <div class="record-list-wrap">

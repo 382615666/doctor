@@ -36,6 +36,9 @@ export default {
       patientInfo: {}
     };
   },
+  created () {
+    console.log(this.$router)
+  },
   mounted () {
     document.body.style.background = '#f9f9f9';
   },

@@ -56,7 +56,7 @@ export default {
           font-size: 19px;
         }
         &+.info-item{
-          margin-left: 25px;
+          margin-left: 20px;
         }
       }
     }

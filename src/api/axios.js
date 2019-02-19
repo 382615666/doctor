@@ -1,7 +1,7 @@
 import axios from 'axios';
 import MintUI from 'mint-ui';
 
-axios.defaults.baseURL = '/common';
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '/common' : 'http://111.8.51.2:8089/common';
 
 axios.interceptors.request.use(config => {
   MintUI.Indicator.open({

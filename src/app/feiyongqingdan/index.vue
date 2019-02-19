@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="feiyong-item-box">
-        【检查费】这里是很多这里是很多这里是很多这里是很多这里是很多这里是很多这里是很多这里是很多
+        【检查费】牛黄解毒丸、小柴胡颗粒、阿司匹林、牛黄解毒丸、、小柴胡颗粒、阿司匹林、牛黄解毒丸
         <div class="aside-info-box">
           <span class="feiyong-count">12盒</span>
           <span class="feiyong-money">11</span>

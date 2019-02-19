@@ -6,8 +6,11 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   base: process.env.NODE_ENV === 'development' ? '/' : '/followup',
-  scrollBehavior: () => ({ y: 0 }),
   routes
+});
+
+router.beforeEach((to, from, next) => {
+  next();
 });
 
 export default router;
