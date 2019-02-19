@@ -1,5 +1,6 @@
 import routerComponent from './router-component';
 const routes = [
+
   {
     path: '/',
     component: routerComponent.layout,
@@ -74,6 +75,13 @@ const routes = [
         component: routerComponent.linshiyizhu,
         meta: {
           title: '临时医嘱'
+        }
+      },
+      {
+        path: 'error',
+        component: routerComponent.error,
+        meta: {
+          title: '404'
         }
       }
     ]
