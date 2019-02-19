@@ -1,21 +1,21 @@
 <template>
-  <div class="changqiyizhu-page">
+  <div class="linshiyizhu-page">
     <person-info :data="patientInfo" :card="false"></person-info>
     <div class="yizhu-box">
       <div class="yizhu-item-box">
         <span class="yizhu-img-box">
           <icon class="icon-buoumaotubiao14"></icon>
         </span>
-          <div class="yizhu-aside-info">
-            <span class="yizhu-doctor">医生/护士：张三/李四</span>
-            执行时间：2041-01-01
-          </div>
-          <p class="yizhu-content">医嘱内容医嘱内容医嘱内容</p>
-          <div class="yizhu-execute">
-            <span class="yizhu-execute-name">执行签名：王五</span>
-            执行时间：2041-01-01
-          </div>
+        <div class="yizhu-aside-info">
+          <span class="yizhu-doctor">医生/护士：张三/李四</span>
+          执行时间：2041-01-01
         </div>
+        <p class="yizhu-content">医嘱内容医嘱内容医嘱内容</p>
+        <div class="yizhu-execute">
+          <span class="yizhu-execute-name">执行签名：王五</span>
+          执行时间：2041-01-01
+        </div>
+      </div>
       <div class="yizhu-item-box">
         <span class="yizhu-img-box">
           <icon class="icon-buoumaotubiao14"></icon>
@@ -90,7 +90,12 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-  .changqiyizhu-page{
+  .linshiyizhu-page{
+
+  }
+</style>
+<style lang="less">
+  .linshiyizhu-page{
     .yizhu-box{
       padding: 0 10px;
       .yizhu-item-box{
@@ -124,10 +129,5 @@ export default {
         }
       }
     }
-  }
-</style>
-<style lang="less">
-  .changqiyizhu-page{
-
   }
 </style>

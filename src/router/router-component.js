@@ -8,5 +8,6 @@ export default {
   baogaozhongxin: () => import('@/app/baogaozhongxin'),
   feiyongqingdan: () => import('@/app/feiyongqingdan'),
   changqiyizhu: () => import('@/app/changqiyizhu'),
+  linshiyizhu: () => import('@/app/linshiyizhu'),
   layout: () => import('@/app/layout')
 };

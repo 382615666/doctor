@@ -67,6 +67,13 @@ const routes = [
         meta: {
           title: '长期医嘱'
         }
+      },
+      {
+        path: 'linshiyizhu',
+        component: routerComponent.linshiyizhu,
+        meta: {
+          title: '临时医嘱'
+        }
       }
     ]
   }

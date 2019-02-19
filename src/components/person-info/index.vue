@@ -5,8 +5,10 @@
       <span class="info-item">{{data.xm}}</span>
       <span class="info-item">{{data.xb}}</span>
       <span class="info-item">{{data.nl}}岁</span>
+      <span class="info-item">科室：{{data.ks}}</span>
     </div>
-    <p class="info-item-box">身份证：{{data.sfzh}}</p>
+    <p class="info-item-box" v-if="card">身份证：{{data.sfzh}}</p>
+    <p class="info-item-box" v-if="!card">床号：{{data.ch || '03床'}}&nbsp;&nbsp;住院号：{{data.inHospitalId}}</p>
   </div>
 </template>
 <script>
@@ -24,6 +26,10 @@ export default {
       default () {
         return {};
       }
+    },
+    card: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {

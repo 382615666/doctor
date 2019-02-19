@@ -1,18 +1,10 @@
 <template>
   <div class="jianchabaogaoxiangqing-page">
     <div class="info-box">
-      <p class="info-item-text">
-        <span class="info-item-title">检查科室</span>：123153
-      </p>
-      <p class="info-item-text">
-        <span class="info-item-title">检查科室</span>：123153
-      </p>
-      <p class="info-item-text">
-        <span class="info-item-title">检查科室</span>：123153
-      </p>
-      <p class="info-item-text">
-        <span class="info-item-title">检查科室</span>：123153
-      </p>
+      <p class="info-item-text">报告单号：123153</p>
+      <p class="info-item-text">项目名称：糖尿(GLU)</p>
+      <p class="info-item-text">登记时间：2018-01-01</p>
+      <p class="info-item-text">报告时间：2018-01-01</p>
     </div>
     <table class="table">
       <thead>

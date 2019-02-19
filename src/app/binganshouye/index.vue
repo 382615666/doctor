@@ -22,17 +22,20 @@
       </div>
       <layout-cell title="姓名" color="#32c691">张三</layout-cell>
       <layout-cell title="性别" color="#32c691">男</layout-cell>
+      <layout-cell title="出生日期" color="#32c691">2018-01-01</layout-cell>
+      <layout-cell title="年龄" color="#32c691">30</layout-cell>
+      <layout-cell title="国籍" color="#32c691">中国</layout-cell>
       <layout-cell title="备注" color="#32c691">测试吸收if第三方so已欧式佛ISf第三方so已欧式佛ISf第三方so已欧式佛ISO死的非师范</layout-cell>
     </div>
     <div class="record-list-box">
       <div class="record-list-wrap">
-        <div class="record-item-box">
+        <div class="record-item-box" @click="toggleRoute('chuyuanjilu')">
           <div class="record-item">出院诊断：已康复</div>
           <div class="record-item">疾控编码：1114566</div>
-          <div class="record-item">入院病情：已康复</div>
-          <div class="record-item">入院病情：出院诊断</div>
+          <div class="record-item">入院病情：一般</div>
+          <div class="record-item">入院病情：应该没什么大问题应该没什么大问题应该没什么大问题应该没什么大问题</div>
         </div>
-        <div class="record-item-box">
+        <div class="record-item-box" @click="toggleRoute('chuyuanjilu')">
           <div class="record-item">出院诊断：已康复</div>
           <div class="record-item">疾控编码：1114566</div>
           <div class="record-item">入院病情：已康复</div>
@@ -56,7 +59,9 @@ export default {
     document.body.style.background = '';
   },
   methods: {
-
+    toggleRoute(path) {
+      this.$router.push(path);
+    }
   }
 };
 </script>

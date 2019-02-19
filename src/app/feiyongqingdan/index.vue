@@ -2,16 +2,18 @@
   <div class="feiyongqingdan-page">
     <div class="info-box">
       <div class="info-item">姓名：张三</div>
-      <div class="info-item">科室：张三</div>
+      <div class="info-item">科室：外科</div>
       <div class="info-item">住院号：4164646465456</div>
       <div class="info-item">病人累计费用：4454元</div>
+      <div class="info-item">费用开始日期：2018-01-01</div>
+      <div class="info-item">费用结束日期：2018-01-01</div>
     </div>
     <div class="feiyong-title-box">
       <span class="feiyong-title">详细清单</span>
     </div>
     <div class="feiyong-list-box">
       <div class="feiyong-item-box">
-        【检查费】这里是很多文字很多文字很多文字很多文字很多文字很多文字很多文字
+        【检查费】阿司匹林
         <div class="aside-info-box">
           <span class="feiyong-count">2盒</span>
           <span class="feiyong-money">11</span>
@@ -19,7 +21,7 @@
         </div>
       </div>
       <div class="feiyong-item-box">
-        【检查费】这里是很多文字很多
+        【中药费】牛黄解毒丸
         <div class="aside-info-box">
           <span class="feiyong-count">12盒</span>
           <span class="feiyong-money">11</span>
@@ -27,7 +29,7 @@
         </div>
       </div>
       <div class="feiyong-item-box">
-        【检查费】这里是很多
+        【西药费】小柴胡颗粒
         <div class="aside-info-box">
           <span class="feiyong-count">12盒</span>
           <span class="feiyong-money">11</span>
@@ -35,7 +37,7 @@
         </div>
       </div>
       <div class="feiyong-item-box">
-        【检查费】这里是很多
+        【检查费】这里是很多这里是很多这里是很多这里是很多这里是很多这里是很多这里是很多这里是很多
         <div class="aside-info-box">
           <span class="feiyong-count">12盒</span>
           <span class="feiyong-money">11</span>

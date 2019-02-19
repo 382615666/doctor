@@ -53,7 +53,7 @@ export default {
         pageNo: this.page.pageNo
       }).then(data => {
         this.patientInfo = data.data.patientInfo;
-        this.listData = [...this.listData, ...data.data.lisList];
+        this.listData = [...this.listData, ...data.data.list];
         this.loading = this.page.pageNo >= data.totalPage;
       });
     },
