@@ -1,21 +1,22 @@
 <template>
   <div class="jianchabaogaoxiangqing-page">
     <div class="info-box">
-      <p class="info-item-text">检查科室：脊柱外科</p>
-      <p class="info-item-text">检查日期：2018-01-01</p>
-      <p class="info-item-text">门诊/住院号：00056960_1</p>
-      <p class="info-item-text">审核者：谢驰</p>
-      <p class="info-item-text">医师签名：王权</p>
-      <p class="info-item-text">报告医师：张凯</p>
-      <p class="info-item-text">报告日期：2018-01-01</p>
+      <p class="info-item-text">科室：{{info.patientInfo.ks}}</p>
+      <p class="info-item-text">检查日期：{{info.jcrq}}</p>
+      <p class="info-item-text">门诊/住院号：{{info.patientInfo.inHospitalId}}</p>
+      <p class="info-item-text">检查部位：{{info.jcbw}}</p>
+      <p class="info-item-text">审核者：{{info.shz}}</p>
+      <p class="info-item-text">医师签名：{{info.ysqm}}</p>
+      <p class="info-item-text">报告医师：{{info.bgys}}</p>
+      <p class="info-item-text">报告日期：{{info.bgrq}}</p>
     </div>
-    <layout-simple title="影响表现">
-      颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常，颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常。
+    <layout-simple title="影像表现">
+      {{info.yxbx}}
     </layout-simple>
     <layout-simple title="影像意见" :style="{
       color: '#333'
     }">
-      颈椎病
+      {{info.yxyj}}
     </layout-simple>
   </div>
 </template>
@@ -23,23 +24,24 @@
 export default {
   data () {
     return {
-
+      info: {}
     };
+  },
+  created () {
+    this.getData();
   },
   methods: {
     getData () {
-      this.page.pageNo++;
-      this.$api.jianchabaogao.get({
+      this.$api.jianchabaogaoxiangqing.get({
         orgCode: '445013138', // 医院id
         inHospitalId: 1, // 住院号
         pageSize: 10,
-        pageNo: this.page.pageNo
+        pacsId: 1,
+        pageNo: 1
       }).then(data => {
-        this.patientInfo = data.data.patientInfo;
-        this.listData = [...this.listData, ...data.data.list];
-        this.loading = this.page.pageNo >= data.totalPage;
+        this.info = data;
       });
-    },
+    }
   }
 };
 </script>

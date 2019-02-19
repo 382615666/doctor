@@ -1,33 +1,26 @@
 <template>
   <div class="linshiyizhu-page">
     <person-info :data="patientInfo" :card="false"></person-info>
-    <div class="yizhu-box">
-      <div class="yizhu-item-box">
+    <div class="yizhu-box"
+         v-infinite-scroll="getData"
+         infinite-scroll-disabled="loading"
+         infinite-scroll-distance="100"
+    >
+      <div class="yizhu-item-box"
+           v-for="(item, index) in listData"
+           :key="index"
+      >
         <span class="yizhu-img-box">
           <icon class="icon-buoumaotubiao14"></icon>
         </span>
         <div class="yizhu-aside-info">
-          <span class="yizhu-doctor">医生/护士：张航/张梅</span>
-          执行时间：2018-10-01
+          <span class="yizhu-doctor">医生/护士：{{item.ysqm}}/{{item.hsqm}}</span>
+          {{item.rq}}
         </div>
-        <p class="yizhu-content">体温测量、尿液检测</p>
+        <p class="yizhu-content">{{item.yznr}}</p>
         <div class="yizhu-execute">
-          <span class="yizhu-execute-name">执行签名：张梅</span>
-          执行时间：2018-09-28
-        </div>
-      </div>
-      <div class="yizhu-item-box">
-        <span class="yizhu-img-box">
-          <icon class="icon-buoumaotubiao14"></icon>
-        </span>
-        <div class="yizhu-aside-info">
-          <span class="yizhu-doctor">医生/护士：刘超/周兰</span>
-          执行时间：2018-09-25
-        </div>
-        <p class="yizhu-content">体温测量、尿液检测</p>
-        <div class="yizhu-execute">
-          <span class="yizhu-execute-name">执行签名：周兰</span>
-          执行时间：2018-09-20
+          <span class="yizhu-execute-name">执行签名：{{item.zxqm}}</span>
+          执行时间：{{item.zxsj}}
         </div>
       </div>
     </div>
@@ -40,22 +33,24 @@ export default {
       page: {
         pageNo: 0
       },
-      patientInfo: {}
+      patientInfo: {},
+      loading: false,
+      listData: []
     };
-  },
-  created () {
-    this.getData();
   },
   methods: {
     getData () {
+      this.loading = true;
       this.page.pageNo++;
-      this.$api.jianyanbaogao.get({
+      this.$api.linshiyizhu.get({
         orgCode: '445013138', // 医院id
         inHospitalId: 1, // 住院号
         pageSize: 10,
         pageNo: this.page.pageNo
       }).then(data => {
         this.patientInfo = data.data.patientInfo;
+        this.listData = [...this.listData, ...data.data.list];
+        this.loading = this.page.pageNo >= data.totalPage;
       });
     }
   }

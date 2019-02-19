@@ -53,7 +53,7 @@ export default {
     getData () {
       this.loading = true;
       this.page.pageNo++;
-      this.$api.jianchabaogaoxiangqing.get({
+      this.$api.jianyanbaogaoxiangqing.get({
         orgCode: '445013138', // 医院id
         inHospitalId: 1, // 住院号
         pageSize: 10,

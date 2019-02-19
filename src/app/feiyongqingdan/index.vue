@@ -1,9 +1,6 @@
 <template>
   <div class="feiyongqingdan-page">
     <div class="info-box">
-      <div class="info-item">姓名：张三</div>
-      <div class="info-item">科室：外科</div>
-      <div class="info-item">住院号：00056960_1</div>
       <div class="info-item">病人累计费用：2354.00元</div>
       <div class="info-item">费用开始日期：2019-01-01</div>
       <div class="info-item">费用结束日期：2018-01-01</div>
@@ -11,37 +8,20 @@
     <div class="feiyong-title-box">
       <span class="feiyong-title">详细清单</span>
     </div>
-    <div class="feiyong-list-box">
-      <div class="feiyong-item-box">
-        【检查费】阿司匹林
+    <div class="feiyong-list-box"
+         v-infinite-scroll="getData"
+         infinite-scroll-disabled="loading"
+         infinite-scroll-distance="100"
+    >
+      <div class="feiyong-item-box"
+           v-for="(item, index) in listData"
+           :key="index"
+      >
+        【{{item.jflb}}】{{item.xmmc}}
         <div class="aside-info-box">
-          <span class="feiyong-count">1盒</span>
-          <span class="feiyong-money">20</span>
-          <span class="feiyong-time">2018-01-01</span>
-        </div>
-      </div>
-      <div class="feiyong-item-box">
-        【中药费】牛黄解毒丸
-        <div class="aside-info-box">
-          <span class="feiyong-count">2盒</span>
-          <span class="feiyong-money">11</span>
-          <span class="feiyong-time">2018-01-01</span>
-        </div>
-      </div>
-      <div class="feiyong-item-box">
-        【西药费】小柴胡颗粒
-        <div class="aside-info-box">
-          <span class="feiyong-count">1盒</span>
-          <span class="feiyong-money">11</span>
-          <span class="feiyong-time">2018-01-01</span>
-        </div>
-      </div>
-      <div class="feiyong-item-box">
-        【检查费】牛黄解毒丸、小柴胡颗粒、阿司匹林、牛黄解毒丸、、小柴胡颗粒、阿司匹林、牛黄解毒丸
-        <div class="aside-info-box">
-          <span class="feiyong-count">1盒</span>
-          <span class="feiyong-money">11</span>
-          <span class="feiyong-time">2018-01-01</span>
+          <span class="feiyong-count">{{item.sl}}{{item.dw}}</span>
+          <span class="feiyong-money">{{item.je}}</span>
+          <span class="feiyong-time">{{item.fyrq}}</span>
         </div>
       </div>
     </div>
@@ -51,7 +31,12 @@
 export default {
   data () {
     return {
-
+      page: {
+        pageNo: 0
+      },
+      info: {},
+      loading: false,
+      listData: []
     };
   },
   mounted () {
@@ -61,7 +46,19 @@ export default {
     document.body.style.background = '';
   },
   methods: {
-
+    getData () {
+      this.loading = true;
+      this.page.pageNo++;
+      this.$api.feiyongqingdan.get({
+        orgCode: '445013138', // 医院id
+        inHospitalId: 1, // 住院号
+        pageSize: 10,
+        pageNo: this.page.pageNo
+      }).then(data => {
+        this.listData = [...this.listData, ...data.data.expenseList];
+        this.loading = this.page.pageNo >= data.totalPage;
+      });
+    }
   }
 };
 </script>
