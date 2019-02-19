@@ -7,19 +7,17 @@
        infinite-scroll-distance="100"
     >
       <report-list
-              time="2018/01/02"
-              title="浏阳市中心医院"
+              :time="item.date"
+              :title="item.hospitalName"
               v-for="(item, index) in listData"
               :key="index"
       >
         <report-item
+                v-for="(it, ind) in item.lisList"
+                :key="ind"
                 icon="icon-weixin"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿常规（11项）</report-item>
-        <report-item
-                icon="icon-weixin"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianyanbaogaoxiangqing')">尿沉渣定量</report-item>
+                :remark="it.ks"
+                @click.native="toggleRoute('jianyanbaogaoxiangqing')">{{it.bbzl}}</report-item>
       </report-list>
     </div>
   </div>
@@ -35,9 +33,6 @@ export default {
       listData: [],
       patientInfo: {}
     };
-  },
-  created () {
-    console.log(this.$router)
   },
   mounted () {
     document.body.style.background = '#f9f9f9';

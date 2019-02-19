@@ -3,9 +3,9 @@
     <div class="info-box">
       <div class="info-item">姓名：张三</div>
       <div class="info-item">科室：外科</div>
-      <div class="info-item">住院号：4164646465456</div>
-      <div class="info-item">病人累计费用：4454元</div>
-      <div class="info-item">费用开始日期：2018-01-01</div>
+      <div class="info-item">住院号：00056960_1</div>
+      <div class="info-item">病人累计费用：2354.00元</div>
+      <div class="info-item">费用开始日期：2019-01-01</div>
       <div class="info-item">费用结束日期：2018-01-01</div>
     </div>
     <div class="feiyong-title-box">
@@ -15,15 +15,15 @@
       <div class="feiyong-item-box">
         【检查费】阿司匹林
         <div class="aside-info-box">
-          <span class="feiyong-count">2盒</span>
-          <span class="feiyong-money">11</span>
+          <span class="feiyong-count">1盒</span>
+          <span class="feiyong-money">20</span>
           <span class="feiyong-time">2018-01-01</span>
         </div>
       </div>
       <div class="feiyong-item-box">
         【中药费】牛黄解毒丸
         <div class="aside-info-box">
-          <span class="feiyong-count">12盒</span>
+          <span class="feiyong-count">2盒</span>
           <span class="feiyong-money">11</span>
           <span class="feiyong-time">2018-01-01</span>
         </div>
@@ -31,7 +31,7 @@
       <div class="feiyong-item-box">
         【西药费】小柴胡颗粒
         <div class="aside-info-box">
-          <span class="feiyong-count">12盒</span>
+          <span class="feiyong-count">1盒</span>
           <span class="feiyong-money">11</span>
           <span class="feiyong-time">2018-01-01</span>
         </div>
@@ -39,7 +39,7 @@
       <div class="feiyong-item-box">
         【检查费】牛黄解毒丸、小柴胡颗粒、阿司匹林、牛黄解毒丸、、小柴胡颗粒、阿司匹林、牛黄解毒丸
         <div class="aside-info-box">
-          <span class="feiyong-count">12盒</span>
+          <span class="feiyong-count">1盒</span>
           <span class="feiyong-money">11</span>
           <span class="feiyong-time">2018-01-01</span>
         </div>

@@ -1,36 +1,22 @@
 <template>
   <div class="jianchabaogao-page">
     <person-info :data="patientInfo"></person-info>
-    <div class="report-box">
-      <report-list time="2018/01/02" title="浏阳市中心医院">
+    <div class="report-box"
+         v-infinite-scroll="getData"
+         infinite-scroll-disabled="loading"
+         infinite-scroll-distance="100"
+    >
+      <report-list
+              :time="item.date"
+              :title="item.hospitalName"
+              v-for="(item, index) in listData"
+              :key="index"
+      >
         <report-item
+                v-for="(it, ind) in item.lisList"
+                :key="ind"
                 icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿常规（11项）</report-item>
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿沉渣定量</report-item>
-      </report-list>
-      <report-list time="2018/01/02" title="浏阳市中心医院">
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿常规（11项）</report-item>
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿沉渣定量</report-item>
-      </report-list>
-      <report-list time="2018/01/02" title="浏阳市中心医院">
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿常规（11项）</report-item>
-        <report-item
-                icon="icon-big-Pay"
-                remark="肾内科六科室"
-                @click.native="toggleRoute('jianchabaogaoxiangqing')">尿沉渣定量</report-item>
+                @click.native="toggleRoute('jianchabaogaoxiangqing')">{{it.jcbw}}</report-item>
       </report-list>
     </div>
   </div>
@@ -42,6 +28,8 @@ export default {
       page: {
         pageNo: 0
       },
+      loading: false,
+      listData: [],
       patientInfo: {}
     };
   },
@@ -56,14 +44,17 @@ export default {
   },
   methods: {
     getData () {
+      this.loading = true;
       this.page.pageNo++;
-      this.$api.jianyanbaogao.get({
+      this.$api.jianchabaogao.get({
         orgCode: '445013138', // 医院id
         inHospitalId: 1, // 住院号
         pageSize: 10,
         pageNo: this.page.pageNo
       }).then(data => {
         this.patientInfo = data.data.patientInfo;
+        this.listData = [...this.listData, ...data.data.list];
+        this.loading = this.page.pageNo >= data.totalPage;
       });
     },
     toggleRoute(path) {
@@ -76,6 +67,12 @@ export default {
   .jianchabaogao-page{
     .report-box{
       padding: 0 10px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 120px;
+      bottom: 0;
+      overflow: auto;
     }
   }
 </style>

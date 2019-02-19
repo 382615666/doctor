@@ -1,43 +1,101 @@
 <template>
   <div class="jianyanbaogaoxiangqing-page">
     <div class="info-box">
-      <p class="info-item-text">检查科室：外科</p>
-      <p class="info-item-text">检查日期：2018-01-01</p>
-      <p class="info-item-text">门诊/住院号：123153</p>
-      <p class="info-item-text">审核者：张三</p>
-      <p class="info-item-text">医师签名：张三</p>
-      <p class="info-item-text">报告医师：张三</p>
-      <p class="info-item-text">报告日期：2018-01-01</p>
+      <p class="info-item-text">标本种类：{{info.bbzl}}</p>
+      <p class="info-item-text">样本编号：{{info.ybbh}}</p>
+      <p class="info-item-text">科室：{{info.ks}}</p>
+      <p class="info-item-text">送检医师：{{info.sjys}}</p>
+      <p class="info-item-text">备注：{{info.bz}}</p>
+      <p class="info-item-text">采样日期：{{info.cyrq}}</p>
     </div>
-    <layout-simple title="影响表现">
-      颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常，颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常颈椎生理曲度轻度反凸，C3-6椎体边缘增生变减，诸椎间盘信号未见异常。
-    </layout-simple>
-    <layout-simple title="影像意见" :style="{
-      color: '#333'
-    }">
-      颈椎病
-    </layout-simple>
+    <div class="table-box"
+         v-infinite-scroll="getData"
+         infinite-scroll-disabled="loading"
+         infinite-scroll-distance="100"
+    >
+      <table class="table">
+        <thead>
+        <tr>
+          <th>名称</th>
+          <th>结果</th>
+          <th>单位</th>
+          <th>参考值</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr
+                v-for="(item, index) in listData"
+                :key="index"
+        >
+          <td>{{item.mc}}</td>
+          <td>{{item.jg}}</td>
+          <td>{{item.dw}}</td>
+          <td>{{item.ckz}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 <script>
 export default {
   data () {
     return {
-
+      page: {
+        pageNo: 0
+      },
+      info: {},
+      loading: false,
+      listData: []
     };
   },
   methods: {
-
+    getData () {
+      this.loading = true;
+      this.page.pageNo++;
+      this.$api.jianchabaogaoxiangqing.get({
+        orgCode: '445013138', // 医院id
+        inHospitalId: 1, // 住院号
+        pageSize: 10,
+        lisId: 1,
+        pageNo: this.page.pageNo
+      }).then(data => {
+        this.info = data.data.lis
+        this.listData = [...this.listData, ...data.data.lis.list];
+        this.loading = this.page.pageNo >= data.totalPage;
+      });
+    }
   }
 };
 </script>
 <style lang="less" scoped>
   .jianyanbaogaoxiangqing-page{
-    padding: 0 10px;
     .info-box{
-      padding: 10px;
-      border-bottom: 1px solid #e0e0e0;
-      line-height: 2;
+      line-height: 2.2;
+      color: #333;
+      padding: 10px 20px;
+    }
+    .table{
+      width: 100%;
+      text-align: center;
+      thead{
+        background: #32c691;
+        color: #fff;
+      }
+      th{
+        & + th{
+          border-left: 1px solid #fff;
+        }
+      }
+      td{
+        border-bottom: 1px solid #e0e0e0;
+        & + td{
+          border-left: 1px solid #e0e0e0;
+        }
+        &:first-child{
+          text-align: left;
+        }
+      }
     }
   }
 </style>

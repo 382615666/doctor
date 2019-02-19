@@ -8,7 +8,7 @@
       <span class="info-item">科室：{{data.ks}}</span>
     </div>
     <p class="info-item-box" v-if="card">身份证：{{data.sfzh}}</p>
-    <p class="info-item-box" v-if="!card">床号：{{data.ch || '03床'}}&nbsp;&nbsp;住院号：{{data.inHospitalId}}</p>
+    <p class="info-item-box" v-if="!card">病案号：{{data.bah}}&nbsp;&nbsp;住院号：{{data.inHospitalId}}</p>
   </div>
 </template>
 <script>

@@ -6,28 +6,14 @@
         <span class="yizhu-img-box">
           <icon class="icon-buoumaotubiao14"></icon>
         </span>
-          <div class="yizhu-aside-info">
-            <span class="yizhu-doctor">医生/护士：张三/李四</span>
-            执行时间：2041-01-01
-          </div>
-          <p class="yizhu-content">医嘱内容医嘱内容医嘱内容</p>
-          <div class="yizhu-execute">
-            <span class="yizhu-execute-name">执行签名：王五</span>
-            执行时间：2041-01-01
-          </div>
-        </div>
-      <div class="yizhu-item-box">
-        <span class="yizhu-img-box">
-          <icon class="icon-buoumaotubiao14"></icon>
-        </span>
         <div class="yizhu-aside-info">
-          <span class="yizhu-doctor">医生/护士：张三/李四</span>
-          执行时间：2041-01-01
+          <span class="yizhu-doctor">医生/护士：张航/张梅</span>
+          执行时间：2018-10-01
         </div>
-        <p class="yizhu-content">医嘱内容医嘱内容医嘱内容</p>
+        <p class="yizhu-content">体温测量、尿液检测</p>
         <div class="yizhu-execute">
-          <span class="yizhu-execute-name">执行签名：王五</span>
-          执行时间：2041-01-01
+          <span class="yizhu-execute-name">执行签名：张梅</span>
+          执行时间：2018-09-28
         </div>
       </div>
       <div class="yizhu-item-box">
@@ -35,27 +21,13 @@
           <icon class="icon-buoumaotubiao14"></icon>
         </span>
         <div class="yizhu-aside-info">
-          <span class="yizhu-doctor">医生/护士：张三/李四</span>
-          执行时间：2041-01-01
+          <span class="yizhu-doctor">医生/护士：刘超/周兰</span>
+          执行时间：2018-09-25
         </div>
-        <p class="yizhu-content">医嘱内容医嘱内容医嘱内容</p>
+        <p class="yizhu-content">体温测量、尿液检测</p>
         <div class="yizhu-execute">
-          <span class="yizhu-execute-name">执行签名：王五</span>
-          执行时间：2041-01-01
-        </div>
-      </div>
-      <div class="yizhu-item-box">
-        <span class="yizhu-img-box">
-          <icon class="icon-buoumaotubiao14"></icon>
-        </span>
-        <div class="yizhu-aside-info">
-          <span class="yizhu-doctor">医生/护士：张三/李四</span>
-          执行时间：2041-01-01
-        </div>
-        <p class="yizhu-content">医嘱内容医嘱内容医嘱内容</p>
-        <div class="yizhu-execute">
-          <span class="yizhu-execute-name">执行签名：王五</span>
-          执行时间：2041-01-01
+          <span class="yizhu-execute-name">执行签名：周兰</span>
+          执行时间：2018-09-20
         </div>
       </div>
     </div>
