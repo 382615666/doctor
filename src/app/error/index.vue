@@ -1,13 +1,14 @@
 <template>
   <div class="error-page">
-    404
+    <img :src="errorImg" alt="" class="error-img">
   </div>
 </template>
 <script>
+import errorImg from '@/assets/image/error.png';
 export default {
   data () {
     return {
-
+      errorImg
     };
   },
   methods: {
@@ -22,6 +23,10 @@ export default {
 </style>
 <style lang="less">
   .error-page{
-
+    text-align: center;
+    padding-top: 100px;
+    .error-img{
+      width: 80%;
+    }
   }
 </style>

@@ -81,7 +81,7 @@ const routes = [
         path: 'error',
         component: routerComponent.error,
         meta: {
-          title: '404'
+          title: '亲，页面丢失了哦！'
         }
       }
     ]
