@@ -42,13 +42,13 @@ export default {
 </script>
 <style lang="less" scoped>
   .chuyuanjilu-page{
-
+    .info-box{
+      padding: 0 10px
+    }
   }
 </style>
 <style lang="less">
   .chuyuanjilu-page{
-    .info-box{
-      padding: 0 10px
-    }
+
   }
 </style>

@@ -78,6 +78,13 @@ const routes = [
         }
       },
       {
+        path: 'bingchengjilu',
+        component: routerComponent.bingchengjilu,
+        meta: {
+          title: '病程记录'
+        }
+      },
+      {
         path: 'error',
         component: routerComponent.error,
         meta: {

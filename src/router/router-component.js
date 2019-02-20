@@ -9,6 +9,7 @@ export default {
   feiyongqingdan: () => import('@/app/feiyongqingdan'),
   changqiyizhu: () => import('@/app/changqiyizhu'),
   linshiyizhu: () => import('@/app/linshiyizhu'),
+  bingchengjilu: () => import('@/app/bingchengjilu'),
   error: () => import('@/app/error'),
   layout: () => import('@/app/layout')
 };
