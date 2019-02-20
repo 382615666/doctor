@@ -57,7 +57,7 @@ export default {
         pageSize: 10,
         pageNo: this.page.pageNo
       }, this.$route.query)).then(data => {
-        this.info = data.data.lis
+        this.info = data.data.lis;
         this.listData = [...this.listData, ...data.data.lis.list];
         this.loading = this.page.pageNo >= data.totalPage;
       });

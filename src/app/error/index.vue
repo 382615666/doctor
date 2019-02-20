@@ -11,6 +11,8 @@ export default {
       errorImg
     };
   },
+  created () {
+  },
   methods: {
 
   }

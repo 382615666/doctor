@@ -10,6 +10,9 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
+  if (to.fullPath === '/error') {
+    to.meta.title = from.meta.title || to.meta.title;
+  }
   next();
 });
 
