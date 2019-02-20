@@ -107,7 +107,7 @@ export default {
       .feiyong-title{
         display: inline-block;
         color: #fff;
-        background: #32c691;
+        background: #0079fb;
         line-height: 2;
         padding: 0 1em 0 .5em;
         border-radius: 0 1em 1em 0;
@@ -118,6 +118,18 @@ export default {
       color: #333;
       line-height: 2;
       padding: 10px;
+      position: relative;
+      margin-bottom: 10px;
+      &:after{
+        position: absolute;
+        top: 100%;
+        content: '';
+        height: 10px;
+        left: 0;
+        width: 100%;
+        background: url('../../assets/image/wave1.png') repeat-x;
+        background-size: 35px 100%;
+      }
       .info-item{
         padding: 0 10px;
       }

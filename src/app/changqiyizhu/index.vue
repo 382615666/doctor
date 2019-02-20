@@ -11,7 +11,7 @@
            :key="index"
       >
         <span class="yizhu-img-box">
-          <icon class="icon-buoumaotubiao14"></icon>
+          <icon class="icon-laba_"></icon>
         </span>
         <div class="yizhu-aside-info">
           <span class="yizhu-doctor">医生/护士：{{item.ysqm}}/{{item.hsqm}}</span>
@@ -61,6 +61,9 @@ export default {
         padding: 10px 0 10px 60px;
         font-size: 12px;
         border-bottom: 1px solid #e0e0e0;
+        .icon-laba_{
+          font-size: 24px;
+        }
         .yizhu-execute{
           .yizhu-execute-name{
             float: right;
@@ -76,7 +79,7 @@ export default {
         }
         .yizhu-img-box{
           position: absolute;
-          background: #36cb95;
+          background: #0079fb;
           color: #fff;
           width: 40px;
           height: 40px;

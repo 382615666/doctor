@@ -17,10 +17,7 @@ export default {
 <style lang="less" scoped>
   .icon-component{
     &.icon-weixin{
-      color: #32c691;
-    }
-    &.icon-big-Pay{
-      color: #ff7c1c;
+      color: #0079fb;
     }
   }
 </style>

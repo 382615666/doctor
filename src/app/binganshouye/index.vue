@@ -2,8 +2,8 @@
   <div class="binganshouye-page">
     <div class="info-box">
       <div class="info-wrap">
-        <div class="info-img">
-          <icon class="icon-13dianpufill"></icon>
+        <div class="info-img-box">
+          <img :src="icon1Img" alt="" class="info-img">
         </div>
         <div class="info-item-box">
           <span class="info-item">医疗机构：</span>
@@ -20,40 +20,40 @@
           <span class="info-item">{{info.bah}}</span>
         </div>
       </div>
-      <layout-cell title="姓名" color="#32c691">{{info.xm}}</layout-cell>
-      <layout-cell title="性别" color="#32c691">{{info.xb}}</layout-cell>
-      <layout-cell title="出生日期" color="#32c691">{{info.csrq}}</layout-cell>
-      <layout-cell title="年龄" color="#32c691">{{info.nl}}</layout-cell>
-      <layout-cell title="国籍" color="#32c691">{{info.gj}}</layout-cell>
-      <layout-cell title="（年龄不足1周岁的）年龄" color="#32c691">{{info.xsrnl}}月</layout-cell>
-      <layout-cell title="新生儿出生体重" color="#32c691">{{info.xsrcstz}}g</layout-cell>
-      <layout-cell title="新生儿入院体重" color="#32c691">{{info.xsrrytz}}g</layout-cell>
-      <layout-cell title="出生地" color="#32c691">{{info.csd}}</layout-cell>
-      <layout-cell title="籍贯" color="#32c691">{{info.jg}}</layout-cell>
-      <layout-cell title="民族" color="#32c691">{{info.mz}}</layout-cell>
-      <layout-cell title="现住址" color="#32c691">{{info.xzz}}</layout-cell>
-      <layout-cell title="电话" color="#32c691">{{info.lxdh}}</layout-cell>
-      <layout-cell title="邮编" color="#32c691">{{info.xzzyb}}</layout-cell>
-      <layout-cell title="户口地址" color="#32c691">{{info.hkdz}}</layout-cell>
-      <layout-cell title="邮编" color="#32c691">{{info.hkdzyb}}</layout-cell>
-      <layout-cell title="工作单位及地址" color="#32c691">{{info.gzdwjdz}}</layout-cell>
-      <layout-cell title="单位电话" color="#32c691">{{info.dwdh}}</layout-cell>
-      <layout-cell title="邮编" color="#32c691">{{info.dwdzyb}}</layout-cell>
-      <layout-cell title="联系人姓名" color="#32c691">{{info.lxrxm}}</layout-cell>
-      <layout-cell title="关系" color="#32c691">{{info.gx}}</layout-cell>
-      <layout-cell title="地址" color="#32c691">{{info.lxrdz}}</layout-cell>
-      <layout-cell title="电话" color="#32c691">{{info.lxrdh}}</layout-cell>
-      <layout-cell title="入院途径" color="#32c691">{{info.rytj}}</layout-cell>
-      <layout-cell title="入院时间" color="#32c691">{{info.rysj}}</layout-cell>
-      <layout-cell title="入院科别" color="#32c691">{{info.rykb}}</layout-cell>
-      <layout-cell title="病房" color="#32c691">{{info.rybf}}</layout-cell>
-      <layout-cell title="转科科别" color="#32c691">{{info.zkkb}}</layout-cell>
-      <layout-cell title="出院时间" color="#32c691">{{info.cysj}}</layout-cell>
-      <layout-cell title="出院科别" color="#32c691">{{info.cykb}}</layout-cell>
-      <layout-cell title="病房" color="#32c691">{{info.cybf}}</layout-cell>
-      <layout-cell title="实际住院" color="#32c691">{{info.zyts}}天</layout-cell>
-      <layout-cell title="门(急)诊诊断" color="#32c691">{{info.mzzd}}</layout-cell>
-      <layout-cell title="疾病编码" color="#32c691">{{info.jbbm}}</layout-cell>
+      <layout-cell title="姓名" color="#0079fb">{{info.xm}}</layout-cell>
+      <layout-cell title="性别" color="#0079fb">{{info.xb}}</layout-cell>
+      <layout-cell title="出生日期" color="#0079fb">{{info.csrq}}</layout-cell>
+      <layout-cell title="年龄" color="#0079fb">{{info.nl}}</layout-cell>
+      <layout-cell title="国籍" color="#0079fb">{{info.gj}}</layout-cell>
+      <layout-cell title="（年龄不足1周岁的）年龄" color="#0079fb">{{info.xsrnl}}月</layout-cell>
+      <layout-cell title="新生儿出生体重" color="#0079fb">{{info.xsrcstz}}g</layout-cell>
+      <layout-cell title="新生儿入院体重" color="#0079fb">{{info.xsrrytz}}g</layout-cell>
+      <layout-cell title="出生地" color="#0079fb">{{info.csd}}</layout-cell>
+      <layout-cell title="籍贯" color="#0079fb">{{info.jg}}</layout-cell>
+      <layout-cell title="民族" color="#0079fb">{{info.mz}}</layout-cell>
+      <layout-cell title="现住址" color="#0079fb">{{info.xzz}}</layout-cell>
+      <layout-cell title="电话" color="#0079fb">{{info.lxdh}}</layout-cell>
+      <layout-cell title="邮编" color="#0079fb">{{info.xzzyb}}</layout-cell>
+      <layout-cell title="户口地址" color="#0079fb">{{info.hkdz}}</layout-cell>
+      <layout-cell title="邮编" color="#0079fb">{{info.hkdzyb}}</layout-cell>
+      <layout-cell title="工作单位及地址" color="#0079fb">{{info.gzdwjdz}}</layout-cell>
+      <layout-cell title="单位电话" color="#0079fb">{{info.dwdh}}</layout-cell>
+      <layout-cell title="邮编" color="#0079fb">{{info.dwdzyb}}</layout-cell>
+      <layout-cell title="联系人姓名" color="#0079fb">{{info.lxrxm}}</layout-cell>
+      <layout-cell title="关系" color="#0079fb">{{info.gx}}</layout-cell>
+      <layout-cell title="地址" color="#0079fb">{{info.lxrdz}}</layout-cell>
+      <layout-cell title="电话" color="#0079fb">{{info.lxrdh}}</layout-cell>
+      <layout-cell title="入院途径" color="#0079fb">{{info.rytj}}</layout-cell>
+      <layout-cell title="入院时间" color="#0079fb">{{info.rysj}}</layout-cell>
+      <layout-cell title="入院科别" color="#0079fb">{{info.rykb}}</layout-cell>
+      <layout-cell title="病房" color="#0079fb">{{info.rybf}}</layout-cell>
+      <layout-cell title="转科科别" color="#0079fb">{{info.zkkb}}</layout-cell>
+      <layout-cell title="出院时间" color="#0079fb">{{info.cysj}}</layout-cell>
+      <layout-cell title="出院科别" color="#0079fb">{{info.cykb}}</layout-cell>
+      <layout-cell title="病房" color="#0079fb">{{info.cybf}}</layout-cell>
+      <layout-cell title="实际住院" color="#0079fb">{{info.zyts}}天</layout-cell>
+      <layout-cell title="门(急)诊诊断" color="#0079fb">{{info.mzzd}}</layout-cell>
+      <layout-cell title="疾病编码" color="#0079fb">{{info.jbbm}}</layout-cell>
     </div>
     <div class="record-list-box">
       <div class="record-list-wrap">
@@ -68,29 +68,29 @@
       </div>
     </div>
     <div class="info-item-box">
-      <layout-cell title="入院病情" color="#32c691">{{info.rybq}}</layout-cell>
-      <layout-cell title="损伤,中毒的外部原因" color="#32c691">{{info.wbyy}}</layout-cell>
-      <layout-cell title="疾病编码" color="#32c691">{{info.wbyyjbbm}}</layout-cell>
-      <layout-cell title="病理诊断" color="#32c691">{{info.blzd}}</layout-cell>
-      <layout-cell title="疾病编码" color="#32c691">{{info.blzdjbbm}}</layout-cell>
-      <layout-cell title="病理号" color="#32c691">{{info.blh}}</layout-cell>
-      <layout-cell title="药物过敏" color="#32c691">{{info.ywgm}}</layout-cell>
-      <layout-cell title="过敏药物" color="#32c691">{{info.gmyw}}</layout-cell>
-      <layout-cell title="死亡患者尸检" color="#32c691">{{info.swhzsj}}</layout-cell>
-      <layout-cell title="血型" color="#32c691">{{info.xx}}</layout-cell>
-      <layout-cell title="Rh" color="#32c691">{{info.rh}}</layout-cell>
-      <layout-cell title="科主任" color="#32c691">{{info.kzr}}</layout-cell>
-      <layout-cell title="主任（副主任）医师" color="#32c691">{{info.zrys}}</layout-cell>
-      <layout-cell title="主治医师" color="#32c691">{{info.zzys}}</layout-cell>
-      <layout-cell title="住院医师" color="#32c691">{{info.zyys}}</layout-cell>
-      <layout-cell title="责任护士" color="#32c691">{{info.zrhs}}</layout-cell>
-      <layout-cell title="进修医师" color="#32c691">{{info.jxys}}</layout-cell>
-      <layout-cell title="实习医师" color="#32c691">{{info.sxys}}</layout-cell>
-      <layout-cell title="编码员" color="#32c691">{{info.bmy}}</layout-cell>
-      <layout-cell title="病案质量" color="#32c691">{{info.bazl}}</layout-cell>
-      <layout-cell title="质控医师" color="#32c691">{{info.zkys}}</layout-cell>
-      <layout-cell title="质控护士" color="#32c691">{{info.zkhs}}</layout-cell>
-      <layout-cell title="质控日期" color="#32c691">{{info.zkrq}}</layout-cell>
+      <layout-cell title="入院病情" color="#0079fb">{{info.rybq}}</layout-cell>
+      <layout-cell title="损伤,中毒的外部原因" color="#0079fb">{{info.wbyy}}</layout-cell>
+      <layout-cell title="疾病编码" color="#0079fb">{{info.wbyyjbbm}}</layout-cell>
+      <layout-cell title="病理诊断" color="#0079fb">{{info.blzd}}</layout-cell>
+      <layout-cell title="疾病编码" color="#0079fb">{{info.blzdjbbm}}</layout-cell>
+      <layout-cell title="病理号" color="#0079fb">{{info.blh}}</layout-cell>
+      <layout-cell title="药物过敏" color="#0079fb">{{info.ywgm}}</layout-cell>
+      <layout-cell title="过敏药物" color="#0079fb">{{info.gmyw}}</layout-cell>
+      <layout-cell title="死亡患者尸检" color="#0079fb">{{info.swhzsj}}</layout-cell>
+      <layout-cell title="血型" color="#0079fb">{{info.xx}}</layout-cell>
+      <layout-cell title="Rh" color="#0079fb">{{info.rh}}</layout-cell>
+      <layout-cell title="科主任" color="#0079fb">{{info.kzr}}</layout-cell>
+      <layout-cell title="主任（副主任）医师" color="#0079fb">{{info.zrys}}</layout-cell>
+      <layout-cell title="主治医师" color="#0079fb">{{info.zzys}}</layout-cell>
+      <layout-cell title="住院医师" color="#0079fb">{{info.zyys}}</layout-cell>
+      <layout-cell title="责任护士" color="#0079fb">{{info.zrhs}}</layout-cell>
+      <layout-cell title="进修医师" color="#0079fb">{{info.jxys}}</layout-cell>
+      <layout-cell title="实习医师" color="#0079fb">{{info.sxys}}</layout-cell>
+      <layout-cell title="编码员" color="#0079fb">{{info.bmy}}</layout-cell>
+      <layout-cell title="病案质量" color="#0079fb">{{info.bazl}}</layout-cell>
+      <layout-cell title="质控医师" color="#0079fb">{{info.zkys}}</layout-cell>
+      <layout-cell title="质控护士" color="#0079fb">{{info.zkhs}}</layout-cell>
+      <layout-cell title="质控日期" color="#0079fb">{{info.zkrq}}</layout-cell>
     </div>
     <div class="record-list-box">
       <div class="record-list-wrap">
@@ -112,50 +112,52 @@
       </div>
     </div>
     <div class="info-item-box">
-      <layout-cell title="离院方式" color="#32c691">{{info.lyfs}}</layout-cell>
-      <layout-cell title="拟接收医疗机构名称" color="#32c691">{{info.njsyljgmc}}</layout-cell>
-      <layout-cell title="是否有出院31天内再住院计划" color="#32c691">{{info.zzyjh}}</layout-cell>
-      <layout-cell title="再住院目的" color="#32c691">{{info.zzymd}}</layout-cell>
-      <layout-cell title="入院前颅脑损伤患者昏迷时间" color="#32c691">{{info.ryqhmsj}}天</layout-cell>
-      <layout-cell title="入院后颅脑损伤患者昏迷时间" color="#32c691">{{info.ryhhmsj}}天</layout-cell>
-      <layout-cell title="总费用" color="#32c691">{{info.zfy}}元</layout-cell>
-      <layout-cell title="自付金额" color="#32c691">{{info.zfje}}元</layout-cell>
-      <layout-cell title="一般医疗服务费" color="#32c691">{{info.ybylfwf}}元</layout-cell>
-      <layout-cell title="一般治疗操作费" color="#32c691">{{info.ybzlczf}}元</layout-cell>
-      <layout-cell title="护理费" color="#32c691">{{info.hlf}}元</layout-cell>
-      <layout-cell title="其他费用" color="#32c691">{{info.qtfy}}元</layout-cell>
-      <layout-cell title="病理诊断费" color="#32c691">{{info.blzdf}}元</layout-cell>
-      <layout-cell title="实验室诊断费" color="#32c691">{{info.syszdf}}元</layout-cell>
-      <layout-cell title="影像学诊断费" color="#32c691">{{info.yxxzdf}}元</layout-cell>
-      <layout-cell title="临床诊断项目费" color="#32c691">{{info.lczdxmf}}元</layout-cell>
-      <layout-cell title="非手术治疗费" color="#32c691">{{info.fsszlf}}元</layout-cell>
-      <layout-cell title="临床物理治疗费" color="#32c691">{{info.lcwlzlf}}元</layout-cell>
-      <layout-cell title="手术治疗费" color="#32c691">{{info.sszlf}}元</layout-cell>
-      <layout-cell title="麻醉费" color="#32c691">{{info.mzf}}元</layout-cell>
-      <layout-cell title="手术费" color="#32c691">{{info.ssf}}元</layout-cell>
-      <layout-cell title="康复费" color="#32c691">{{info.kff}}元</layout-cell>
-      <layout-cell title="中医治疗费" color="#32c691">{{info.zyzlf}}元</layout-cell>
-      <layout-cell title="西医费" color="#32c691">{{info.xyf}}元</layout-cell>
-      <layout-cell title="抗菌药物费" color="#32c691">{{info.kjywf}}元</layout-cell>
-      <layout-cell title="中成药费" color="#32c691">{{info.zcyf}}元</layout-cell>
-      <layout-cell title="中草药费" color="#32c691">{{info.zcaoyf}}元</layout-cell>
-      <layout-cell title="血费" color="#32c691">{{info.xf}}元</layout-cell>
-      <layout-cell title="白蛋白类制品费" color="#32c691">{{info.bdblzpf}}元</layout-cell>
-      <layout-cell title="球蛋白类制品费" color="#32c691">{{info.qdblzpf}}元</layout-cell>
-      <layout-cell title="凝血因子类制品费" color="#32c691">{{info.nxyzlzpf}}元</layout-cell>
-      <layout-cell title="细胞因子类制品费" color="#32c691">{{info.xbyzlzpf}}元</layout-cell>
-      <layout-cell title="检查用一次性医用材料费" color="#32c691">{{info.jcclf}}元</layout-cell>
-      <layout-cell title="治疗用一次性医用材料费" color="#32c691">{{info.zlclf}}元</layout-cell>
-      <layout-cell title="手术用一次性医用材料费" color="#32c691">{{info.shclf}}元</layout-cell>
-      <layout-cell title="其他费" color="#32c691">{{info.qtf}}元</layout-cell>
+      <layout-cell title="离院方式" color="#0079fb">{{info.lyfs}}</layout-cell>
+      <layout-cell title="拟接收医疗机构名称" color="#0079fb">{{info.njsyljgmc}}</layout-cell>
+      <layout-cell title="是否有出院31天内再住院计划" color="#0079fb">{{info.zzyjh}}</layout-cell>
+      <layout-cell title="再住院目的" color="#0079fb">{{info.zzymd}}</layout-cell>
+      <layout-cell title="入院前颅脑损伤患者昏迷时间" color="#0079fb">{{info.ryqhmsj}}天</layout-cell>
+      <layout-cell title="入院后颅脑损伤患者昏迷时间" color="#0079fb">{{info.ryhhmsj}}天</layout-cell>
+      <layout-cell title="总费用" color="#0079fb">{{info.zfy}}元</layout-cell>
+      <layout-cell title="自付金额" color="#0079fb">{{info.zfje}}元</layout-cell>
+      <layout-cell title="一般医疗服务费" color="#0079fb">{{info.ybylfwf}}元</layout-cell>
+      <layout-cell title="一般治疗操作费" color="#0079fb">{{info.ybzlczf}}元</layout-cell>
+      <layout-cell title="护理费" color="#0079fb">{{info.hlf}}元</layout-cell>
+      <layout-cell title="其他费用" color="#0079fb">{{info.qtfy}}元</layout-cell>
+      <layout-cell title="病理诊断费" color="#0079fb">{{info.blzdf}}元</layout-cell>
+      <layout-cell title="实验室诊断费" color="#0079fb">{{info.syszdf}}元</layout-cell>
+      <layout-cell title="影像学诊断费" color="#0079fb">{{info.yxxzdf}}元</layout-cell>
+      <layout-cell title="临床诊断项目费" color="#0079fb">{{info.lczdxmf}}元</layout-cell>
+      <layout-cell title="非手术治疗费" color="#0079fb">{{info.fsszlf}}元</layout-cell>
+      <layout-cell title="临床物理治疗费" color="#0079fb">{{info.lcwlzlf}}元</layout-cell>
+      <layout-cell title="手术治疗费" color="#0079fb">{{info.sszlf}}元</layout-cell>
+      <layout-cell title="麻醉费" color="#0079fb">{{info.mzf}}元</layout-cell>
+      <layout-cell title="手术费" color="#0079fb">{{info.ssf}}元</layout-cell>
+      <layout-cell title="康复费" color="#0079fb">{{info.kff}}元</layout-cell>
+      <layout-cell title="中医治疗费" color="#0079fb">{{info.zyzlf}}元</layout-cell>
+      <layout-cell title="西医费" color="#0079fb">{{info.xyf}}元</layout-cell>
+      <layout-cell title="抗菌药物费" color="#0079fb">{{info.kjywf}}元</layout-cell>
+      <layout-cell title="中成药费" color="#0079fb">{{info.zcyf}}元</layout-cell>
+      <layout-cell title="中草药费" color="#0079fb">{{info.zcaoyf}}元</layout-cell>
+      <layout-cell title="血费" color="#0079fb">{{info.xf}}元</layout-cell>
+      <layout-cell title="白蛋白类制品费" color="#0079fb">{{info.bdblzpf}}元</layout-cell>
+      <layout-cell title="球蛋白类制品费" color="#0079fb">{{info.qdblzpf}}元</layout-cell>
+      <layout-cell title="凝血因子类制品费" color="#0079fb">{{info.nxyzlzpf}}元</layout-cell>
+      <layout-cell title="细胞因子类制品费" color="#0079fb">{{info.xbyzlzpf}}元</layout-cell>
+      <layout-cell title="检查用一次性医用材料费" color="#0079fb">{{info.jcclf}}元</layout-cell>
+      <layout-cell title="治疗用一次性医用材料费" color="#0079fb">{{info.zlclf}}元</layout-cell>
+      <layout-cell title="手术用一次性医用材料费" color="#0079fb">{{info.shclf}}元</layout-cell>
+      <layout-cell title="其他费" color="#0079fb">{{info.qtf}}元</layout-cell>
     </div>
   </div>
 </template>
 <script>
+import icon1Img from '@/assets/image/icon1.png';
 export default {
   data () {
     return {
-      info: {}
+      info: {},
+      icon1Img
     };
   },
   created () {
@@ -198,15 +200,28 @@ export default {
       padding: 10px;
       background: #fff;
       .info-wrap{
-        background: #32c691;
-        padding: 10px 10px 0;
+        background: #0079fb;
+        padding: 10px;
         color: #fff;
+        position: relative;
+        margin-bottom: 10px;
+        &:after{
+          position: absolute;
+          top: 100%;
+          content: '';
+          height: 10px;
+          left: 0;
+          width: 100%;
+          background: url('../../assets/image/wave.png') repeat-x;
+          background-size: 35px 100%;
+        }
       }
-      .info-img{
+      .info-img-box{
         text-align: center;
-        .icon-13dianpufill{
-          font-size: 50px;
-          opacity: .6;
+        padding-bottom: 10px;
+        .info-img{
+          width: 55px;
+          opacity: .8;
         }
       }
       .info-item-box{

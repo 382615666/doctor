@@ -2,7 +2,7 @@
   <div class="report-item-component">
     <span class="report-right-box">
       {{remark}}
-      <icon class="icon-jiantou"></icon>
+      <icon class="icon-arrow"></icon>
     </span>
     <span class="report-icon" v-if="icon || $slots.icon">
       <icon :class="icon" v-if="icon && !$slots.icon"></icon>

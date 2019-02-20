@@ -76,7 +76,7 @@ export default {
       width: 100%;
       text-align: center;
       thead{
-        background: #32c691;
+        background: #0079fb;
         color: #fff;
       }
       th{

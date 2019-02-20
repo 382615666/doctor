@@ -15,9 +15,11 @@
         <report-item
                 v-for="(it, ind) in item.lisList"
                 :key="ind"
-                icon="icon-weixin"
                 :remark="it.ks"
-                @click.native="toggleRoute(it.lisId)">{{it.bbzl}}</report-item>
+                @click.native="toggleRoute(it.lisId)">
+          <i class="svg-icon-jianyan"></i>
+          {{it.bbzl}}
+        </report-item>
       </report-list>
     </div>
   </div>

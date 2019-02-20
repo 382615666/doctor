@@ -32,7 +32,7 @@ export default {
       border-top: 1px solid #e0e0e0;
     }
     .simple-title{
-      color: #32c691;
+      color: #0079fb;
       line-height: 2;
     }
     .simple-content{

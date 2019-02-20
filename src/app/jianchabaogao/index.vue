@@ -16,7 +16,10 @@
                 v-for="(it, ind) in item.lisList"
                 :key="ind"
                 icon="icon-big-Pay"
-                @click.native="toggleRoute(it.pacsId)">{{it.jcbw}}</report-item>
+                @click.native="toggleRoute(it.pacsId)">
+          <i class="svg-icon-jiancha"></i>
+          {{it.jcbw}}
+        </report-item>
       </report-list>
     </div>
   </div>

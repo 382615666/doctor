@@ -1,14 +1,12 @@
 <template>
-  <div class="app-header-component" :class="{
-    border
-  }">
+  <div class="app-header-component">
     <div class="app-header-wrap">
       <a href="/backToApp.action?module=TO_WJJ_FOLLOW_UP" style="color: #666;"
          v-if="!$route.meta.route"
       >
-        <icon class="icon-jiantou"></icon>
+        <icon class="icon-arrow-copy"></icon>
       </a>
-      <icon v-if="$route.meta.route" class="icon-jiantou" @click.native="back"></icon>
+      <icon v-if="$route.meta.route" class="icon-arrow-copy" @click.native="back"></icon>
       {{$route.meta.title}}
     </div>
   </div>
@@ -22,10 +20,6 @@ export default {
     };
   },
   props: {
-    border: {
-      type: Boolean,
-      border: true
-    }
   },
   methods: {
     back () {
@@ -38,22 +32,21 @@ export default {
   .app-header-component{
     height: 44px;
     .app-header-wrap{
-      height: 43px;
-      line-height: 43px;
-      background: #f9f9f9;
+      height: 44px;
+      line-height: 44px;
+      background: #0079fb;
       font-size: 18px;
       text-align: center;
       position: fixed;
+      color: #fff;
       left: 0;
       right: 0;
       top: 0;
       z-index: 1;
-      &.border{
-        border-bottom: 1px solid #e6e6e6;
-      }
     }
-    .icon-jiantou{
+    .icon-arrow-copy{
       left: 0;
+      color: #fff;
     }
   }
 </style>

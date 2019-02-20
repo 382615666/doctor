@@ -41,7 +41,7 @@ export default {
   .person-info-component{
     padding: 13px 15px 13px 80px;
     height: 50px;
-    background: #32c691;
+    background: #0079fb;
     .avator{
       width: 50px;
       height: 50px;

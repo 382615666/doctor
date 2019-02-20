@@ -36,7 +36,7 @@ export default {
   .report-list-component{
     padding-bottom: 20px;
     &+.report-list-component{
-      border-top: 1px dashed #32c691;
+      border-top: 1px dashed #0079fb;
     }
     .report-content-box{
       border-radius: 5px;
@@ -50,7 +50,7 @@ export default {
       &:before{
         content: '';
         width: 5px;
-        background: #32c691;
+        background: #0079fb;
         height: 5px;
         border-radius: 50%;
         display: inline-block;
