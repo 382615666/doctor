@@ -105,7 +105,7 @@
           <div class="record-item">手术操作医师-Ⅰ助：{{item.czysyz}}</div>
           <div class="record-item">手术操作医师-Ⅱ助：{{item.czysez}}</div>
           <div class="record-item">切口愈合等级：{{item.qkyhdj}}</div>
-          <div class="record-item">麻醉方式：{{item.czbm}}</div>
+          <div class="record-item">麻醉方式：{{item.mzfs}}</div>
           <div class="record-item">麻醉医师：{{item.mzys}}</div>
         </div>
       </div>
