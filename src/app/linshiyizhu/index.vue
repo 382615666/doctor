@@ -6,21 +6,31 @@
          infinite-scroll-disabled="loading"
          infinite-scroll-distance="100"
     >
-      <div class="yizhu-item-box"
+      <div class="yizhu-wrap"
            v-for="(item, index) in listData"
            :key="index"
       >
-        <span class="yizhu-img-box">
-          <icon class="icon-laba_"></icon>
-        </span>
-        <div class="yizhu-aside-info">
-          <span class="yizhu-doctor">医生/护士：{{item.ysqm}}/{{item.hsqm}}</span>
-          {{item.rq}}
-        </div>
-        <p class="yizhu-content">{{item.yznr}}</p>
-        <div class="yizhu-execute">
-          <span class="yizhu-execute-name">执行签名：{{item.zxqm}}</span>
-          执行时间：{{item.zxsj}}
+        <div class="yizhu-item-wrap">
+          <div class="yizhu-time-box">
+            <span class="yizhu-time">{{item.rq | dateFormat('YYYY-MM-DD')}}</span>
+          </div>
+          <div class="yizhu-item-box"
+               v-for="(it, ind) in item.list"
+               :key="ind"
+          >
+            <span class="yizhu-img-box">
+              <icon class="icon-laba_"></icon>
+            </span>
+            <div class="yizhu-aside-info">
+              <span class="yizhu-doctor">医生/护士：{{it.ysqm}}/{{it.hsqm}}</span>
+              {{it.rq}}
+            </div>
+            <p class="yizhu-content">{{it.yznr}}</p>
+            <div class="yizhu-execute">
+              <span class="yizhu-execute-name">执行签名：{{it.zxqm}}</span>
+              执行时间：{{it.zxsj}}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -44,6 +54,7 @@ export default {
       this.page.pageNo++;
       this.$api.linshiyizhu.get(Object.assign({
         pageSize: 10,
+        adviceType: 2,
         pageNo: this.page.pageNo
       }, this.$route.query)).then(data => {
         this.patientInfo = data.data.patientInfo;
@@ -56,17 +67,37 @@ export default {
 </script>
 <style lang="less" scoped>
   .linshiyizhu-page{
-
-  }
-</style>
-<style lang="less">
-  .linshiyizhu-page{
+    .yizhu-wrap{
+      background: #f9f9f9;
+      padding: 10px;
+      & + .yizhu-wrap{
+        padding-top: 0;
+      }
+      .yizhu-item-wrap{
+        background: #fff;
+        padding: 0 10px;
+        border-radius: 5px;
+      }
+      .yizhu-time-box{
+        padding-top: 10px;
+        .yizhu-time{
+          background: #0079fb;
+          display: inline-block;
+          color: #fff;
+          border-radius: 0 .75em .75em 0;
+          line-height: 1.5;
+          padding: 0 10px;
+        }
+      }
+    }
     .yizhu-box{
-      padding: 0 10px;
       .yizhu-item-box{
-        padding: 10px 0 10px 60px;
+        padding: 10px 0 10px 50px;
         font-size: 12px;
-        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+        & + .yizhu-item-box{
+          border-top: 1px solid #e0e0e0;
+        }
         .icon-laba_{
           font-size: 24px;
         }
@@ -88,14 +119,19 @@ export default {
           background: #0079fb;
           color: #fff;
           width: 40px;
+          top: 50%;
           height: 40px;
           border-radius: 5px;
           line-height: 40px;
           text-align: center;
           margin-left: -50px;
-          margin-top: 8px;
+          transform: translate(0, -50%);
         }
       }
     }
+  }
+</style>
+<style lang="less">
+  .linshiyizhu-page{
   }
 </style>

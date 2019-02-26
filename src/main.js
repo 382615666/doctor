@@ -8,6 +8,7 @@ import router from './router';
 
 import components from '@/components';
 import api from '@/api';
+import filters from '@/filters';
 
 Vue.config.productionTip = false;
 
@@ -16,7 +17,9 @@ Vue.prototype.$api = api;
 components.forEach(module => {
   Vue.component(module.default.name, module.default);
 });
-
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key]);
+});
 Vue.use(MintUI);
 
 new Vue({

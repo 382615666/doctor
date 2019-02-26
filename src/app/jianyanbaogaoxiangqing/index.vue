@@ -28,7 +28,12 @@
                 :key="index"
         >
           <td>{{item.mc}}</td>
-          <td>{{item.jg}}</td>
+          <td :class="{
+            high: item.jgts === 1 || item.jgts === 2,
+            low: item.jgts === 3,
+          }">
+            {{item.jg}}<icon class="icon-jiantou_xiangshang_o" v-if="item.jgts === 2"></icon><icon class="icon-jiantou_xiangshang_o-copy" v-if="item.jgts === 3"></icon>
+          </td>
           <td>{{item.dw}}</td>
           <td>{{item.ckz}}</td>
         </tr>
@@ -91,6 +96,16 @@ export default {
         }
         &:first-child{
           text-align: left;
+        }
+        &:nth-child(2) {
+          color: #32c691;
+          white-space: nowrap;
+        }
+        &.high{
+          color: #ff4040;
+        }
+        &.low{
+          color: #fc841a;
         }
       }
     }

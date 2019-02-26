@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default {
   get (params) {
-    return axios.get(`/getShortTermAdviceList.action`, {
+    return axios.get(`/getAdvice.action`, {
       params
     });
   }

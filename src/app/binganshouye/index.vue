@@ -55,7 +55,7 @@
       <layout-cell title="门(急)诊诊断" color="#0079fb">{{info.mzzd}}</layout-cell>
       <layout-cell title="疾病编码" color="#0079fb">{{info.jbbm}}</layout-cell>
     </div>
-    <div class="record-list-box">
+    <div class="record-list-box" v-if="info.diagnosisList.length">
       <div class="record-list-wrap">
         <div class="record-item-box"
              v-for="(item, index) in info.diagnosisList"
@@ -68,7 +68,6 @@
       </div>
     </div>
     <div class="info-item-box">
-      <layout-cell title="入院病情" color="#0079fb">{{info.rybq}}</layout-cell>
       <layout-cell title="损伤,中毒的外部原因" color="#0079fb">{{info.wbyy}}</layout-cell>
       <layout-cell title="疾病编码" color="#0079fb">{{info.wbyyjbbm}}</layout-cell>
       <layout-cell title="病理诊断" color="#0079fb">{{info.blzd}}</layout-cell>
@@ -92,7 +91,7 @@
       <layout-cell title="质控护士" color="#0079fb">{{info.zkhs}}</layout-cell>
       <layout-cell title="质控日期" color="#0079fb">{{info.zkrq}}</layout-cell>
     </div>
-    <div class="record-list-box">
+    <div class="record-list-box" v-if="info.operationList.length">
       <div class="record-list-wrap">
         <div class="record-item-box"
              v-for="(item, index) in info.operationList"
@@ -118,36 +117,73 @@
       <layout-cell title="再住院目的" color="#0079fb">{{info.zzymd}}</layout-cell>
       <layout-cell title="入院前颅脑损伤患者昏迷时间" color="#0079fb">{{info.ryqhmsj}}天</layout-cell>
       <layout-cell title="入院后颅脑损伤患者昏迷时间" color="#0079fb">{{info.ryhhmsj}}天</layout-cell>
-      <layout-cell title="总费用" color="#0079fb">{{info.zfy}}元</layout-cell>
-      <layout-cell title="自付金额" color="#0079fb">{{info.zfje}}元</layout-cell>
-      <layout-cell title="一般医疗服务费" color="#0079fb">{{info.ybylfwf}}元</layout-cell>
-      <layout-cell title="一般治疗操作费" color="#0079fb">{{info.ybzlczf}}元</layout-cell>
-      <layout-cell title="护理费" color="#0079fb">{{info.hlf}}元</layout-cell>
-      <layout-cell title="其他费用" color="#0079fb">{{info.qtfy}}元</layout-cell>
-      <layout-cell title="病理诊断费" color="#0079fb">{{info.blzdf}}元</layout-cell>
-      <layout-cell title="实验室诊断费" color="#0079fb">{{info.syszdf}}元</layout-cell>
-      <layout-cell title="影像学诊断费" color="#0079fb">{{info.yxxzdf}}元</layout-cell>
-      <layout-cell title="临床诊断项目费" color="#0079fb">{{info.lczdxmf}}元</layout-cell>
-      <layout-cell title="非手术治疗费" color="#0079fb">{{info.fsszlf}}元</layout-cell>
-      <layout-cell title="临床物理治疗费" color="#0079fb">{{info.lcwlzlf}}元</layout-cell>
-      <layout-cell title="手术治疗费" color="#0079fb">{{info.sszlf}}元</layout-cell>
-      <layout-cell title="麻醉费" color="#0079fb">{{info.mzf}}元</layout-cell>
-      <layout-cell title="手术费" color="#0079fb">{{info.ssf}}元</layout-cell>
-      <layout-cell title="康复费" color="#0079fb">{{info.kff}}元</layout-cell>
-      <layout-cell title="中医治疗费" color="#0079fb">{{info.zyzlf}}元</layout-cell>
-      <layout-cell title="西医费" color="#0079fb">{{info.xyf}}元</layout-cell>
-      <layout-cell title="抗菌药物费" color="#0079fb">{{info.kjywf}}元</layout-cell>
-      <layout-cell title="中成药费" color="#0079fb">{{info.zcyf}}元</layout-cell>
-      <layout-cell title="中草药费" color="#0079fb">{{info.zcaoyf}}元</layout-cell>
-      <layout-cell title="血费" color="#0079fb">{{info.xf}}元</layout-cell>
-      <layout-cell title="白蛋白类制品费" color="#0079fb">{{info.bdblzpf}}元</layout-cell>
-      <layout-cell title="球蛋白类制品费" color="#0079fb">{{info.qdblzpf}}元</layout-cell>
-      <layout-cell title="凝血因子类制品费" color="#0079fb">{{info.nxyzlzpf}}元</layout-cell>
-      <layout-cell title="细胞因子类制品费" color="#0079fb">{{info.xbyzlzpf}}元</layout-cell>
-      <layout-cell title="检查用一次性医用材料费" color="#0079fb">{{info.jcclf}}元</layout-cell>
-      <layout-cell title="治疗用一次性医用材料费" color="#0079fb">{{info.zlclf}}元</layout-cell>
-      <layout-cell title="手术用一次性医用材料费" color="#0079fb">{{info.shclf}}元</layout-cell>
-      <layout-cell title="其他费" color="#0079fb">{{info.qtf}}元</layout-cell>
+    </div>
+    <div class="record-list-box">
+      <div class="record-list-wrap">
+        <layout-cell-block>
+          <layout-cell title="住院费用(元)" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="总费用" color="#0079fb">{{info.zfy}}元</layout-cell>
+          <layout-cell title="自付金额" color="#0079fb">{{info.zfje}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="综合医疗服务类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="一般医疗服务费" color="#0079fb">{{info.ybylfwf}}元</layout-cell>
+          <layout-cell title="一般治疗操作费" color="#0079fb">{{info.ybzlczf}}元</layout-cell>
+          <layout-cell title="护理费" color="#0079fb">{{info.hlf}}元</layout-cell>
+          <layout-cell title="其他费用" color="#0079fb">{{info.qtfy}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="诊断类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="病理诊断费" color="#0079fb">{{info.blzdf}}元</layout-cell>
+          <layout-cell title="实验室诊断费" color="#0079fb">{{info.syszdf}}元</layout-cell>
+          <layout-cell title="影像学诊断费" color="#0079fb">{{info.yxxzdf}}元</layout-cell>
+          <layout-cell title="临床诊断项目费" color="#0079fb">{{info.lczdxmf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="治疗类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="非手术治疗费" color="#0079fb">{{info.fsszlf}}元</layout-cell>
+          <layout-cell title="临床物理治疗费" color="#0079fb">{{info.lcwlzlf}}元</layout-cell>
+          <layout-cell title="手术治疗费" color="#0079fb">{{info.sszlf}}元</layout-cell>
+          <layout-cell title="麻醉费" color="#0079fb">{{info.mzf}}元</layout-cell>
+          <layout-cell title="手术费" color="#0079fb">{{info.ssf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="康复类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="康复费" color="#0079fb">{{info.kff}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="中医类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="中医治疗费" color="#0079fb">{{info.zyzlf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="西药类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="西医费" color="#0079fb">{{info.xyf}}元</layout-cell>
+          <layout-cell title="抗菌药物费" color="#0079fb">{{info.kjywf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="中药类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="中成药费" color="#0079fb">{{info.zcyf}}元</layout-cell>
+          <layout-cell title="中草药费" color="#0079fb">{{info.zcaoyf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="血液和血液制品类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="血费" color="#0079fb">{{info.xf}}元</layout-cell>
+          <layout-cell title="白蛋白类制品费" color="#0079fb">{{info.bdblzpf}}元</layout-cell>
+          <layout-cell title="球蛋白类制品费" color="#0079fb">{{info.qdblzpf}}元</layout-cell>
+          <layout-cell title="凝血因子类制品费" color="#0079fb">{{info.nxyzlzpf}}元</layout-cell>
+          <layout-cell title="细胞因子类制品费" color="#0079fb">{{info.xbyzlzpf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="耗材类" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="检查用一次性医用材料费" color="#0079fb">{{info.jcclf}}元</layout-cell>
+          <layout-cell title="治疗用一次性医用材料费" color="#0079fb">{{info.zlclf}}元</layout-cell>
+          <layout-cell title="手术用一次性医用材料费" color="#0079fb">{{info.shclf}}元</layout-cell>
+        </layout-cell-block>
+        <layout-cell-block>
+          <layout-cell title="其他费" color="#0079fb" slot="head"></layout-cell>
+          <layout-cell title="其他费" color="#0079fb">{{info.qtf}}元</layout-cell>
+        </layout-cell-block>
+      </div>
     </div>
   </div>
 </template>
@@ -156,7 +192,10 @@ import icon1Img from '@/assets/image/icon1.png';
 export default {
   data () {
     return {
-      info: {},
+      info: {
+        diagnosisList: [],
+        operationList: []
+      },
       icon1Img
     };
   },
