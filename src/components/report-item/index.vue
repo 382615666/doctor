@@ -48,7 +48,7 @@ export default {
     }
     .report-right-box{
       float: right;
-      height: 42px;
+      height: 40px;
       .icon-jiantou{
         color: #bcbcbc;
       }
